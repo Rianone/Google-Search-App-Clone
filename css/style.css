@@ -29,7 +29,7 @@ body .modal-voice-container .modal{
     padding: 1rem;
     border: none;
     border-radius: 20px;
-    width: 50%;
+    width: 30%;
     height: 60vh;
     display: flex;
     align-items: center;
@@ -173,6 +173,12 @@ body .main-container .container-search .search-input{
 }
 
 /*MEDIA QUERIES*/
+@media(max-width:1100px) {
+    body .modal-voice-container .modal{
+        width: 50%;
+        height: 60vh;
+    }
+}
 @media(max-width:700px) {
     body .main-container .container-search {
         width: 150%;
@@ -186,6 +192,10 @@ body .main-container .container-search .search-input{
     .container .images-container img{
         width: 7rem;
         height: 5rem;
+    }
+    body .modal-voice-container .modal{
+        width: 60%;
+        height: 50vh;
     }
 }
 
