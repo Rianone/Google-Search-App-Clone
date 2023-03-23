@@ -41,7 +41,7 @@ recognition.onspeechend = function () {
 }
 
 recognition.onerror = function () {
-    instructions.innerHTML = "Try Again !";
+    instructions.innerHTML = "An error occured, Try Again !";
 }
 
 recognition.onresult = function (event) {
@@ -60,6 +60,7 @@ recognition.onresult = function (event) {
 
 button.addEventListener("click", function () {
     modal.style.display = "flex";
+    instructions.innerHTML = ""
     recognition.start()
 });
 
