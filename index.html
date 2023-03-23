@@ -18,7 +18,8 @@
 <body>
     <div class="modal-voice-container">
         <div class="modal">
-            Talk !
+            <br>
+            <p>Talk !</p>
             <div class="icon">
                 <div class="icon2">
                     <div class="icon3">
@@ -26,8 +27,11 @@
                     </div>
                 </div>
             </div>
-            <p class="entered-text"></p>
+            <p class="entered-text" id="entered-text"></p>
+            <p class="output" ><em id="instructions"></em></p>
+            <br>
             <button id="recognition-button">Go</button>
+            <br>
         </div>
     </div>
     <div class="container">
@@ -37,7 +41,7 @@
             <div class="container-search">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input type="text" class="search-input" placeholder="Effectuer une recherche ou Saissisez une URL" id="search_input">
-                <i class="fa fa-microphone" aria-hidden="true"></i>
+                <i class="fa fa-microphone" aria-hidden="true" id="triggger-mic"></i>
             </div>
         </section>
 

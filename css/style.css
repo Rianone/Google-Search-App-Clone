@@ -17,7 +17,7 @@ body .modal-voice-container{
     top: 2;
     width: 100vw;
     height: 100vh;
-    /* display: none; */
+    display: none;
     position: fixed;
     background-color: rgba(0,0,0,0.5);
     overflow: auto;
@@ -30,7 +30,7 @@ body .modal-voice-container .modal{
     border: none;
     border-radius: 20px;
     width: 50%;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -63,6 +63,10 @@ body .modal-voice-container .modal .entered-text{
     padding: 1rem;
     overflow: auto;
 }
+body .modal-voice-container .modal .output{
+/* font-size: 0.7rem; */
+color: rgb(25, 148, 148);
+}
 body .modal-voice-container .modal #recognition-button{
     width: 50%;
     border: none;
@@ -73,6 +77,7 @@ body .modal-voice-container .modal #recognition-button{
     border-radius: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    margin-bottom: 0.2rem;
 }
 body .modal-voice-container .modal #recognition-button:hover{
     background-color: rgba(0, 170, 255, 0.728);
