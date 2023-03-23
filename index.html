@@ -5,20 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Search Bar</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
+    <link rel="manifest" href="./images/icons/site.webmanifest">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <section class="main-container">
-        <h1>Google</h1>
-        
-        <div class="container-search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input type="text" class="search-input" placeholder="Effectuer une recherche ou Saissisez une URL">
-            <i class="fa fa-microphone" aria-hidden="true"></i>
+    <div class="modal-voice-container">
+        <div class="modal">
+            Talk !
+            <div class="icon">
+                <div class="icon2">
+                    <div class="icon3">
+                        <i class="fa fa-microphone" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="entered-text"></p>
+            <button id="recognition-button">Go</button>
         </div>
-    </section>
+    </div>
+    <div class="container">
+        <section class="main-container">
+            <h1>Google</h1>
+            
+            <div class="container-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" class="search-input" placeholder="Effectuer une recherche ou Saissisez une URL" id="search_input">
+                <i class="fa fa-microphone" aria-hidden="true"></i>
+            </div>
+        </section>
+
+        <section class="images-container">
+            <p>Choose background</p>
+            <div class="first-col">
+                <a class="image_photo"><img src="./images/bg1.avif" alt="bg-image"></a>
+                <a class="image_photo"><img src="./images/bg2.avif" alt="bg-image"></a>
+                <a class="image_photo"><img src="./images/bg3.avif" alt="bg-image"></a>
+            </div>
+            <div class="second-col">
+                <a class="image_photo"><img src="./images/bg4.avif" alt="bg-image"></a>
+                <a class="image_photo"><img src="./images/bg5.avif" alt="bg-image"></a>
+                <a class="image_photo"><img src="./images/bg6.avif" alt="bg-image"></a>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

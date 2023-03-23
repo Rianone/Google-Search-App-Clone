@@ -6,8 +6,79 @@
     margin: 0;
     box-sizing: border-box;
 }
+body .modal-voice-container{
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    top: 2;
+    width: 100vw;
+    height: 100vh;
+    /* display: none; */
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+    animation: fadein 1s ease-in-out;
+}
+body .modal-voice-container .modal{
+    align-self: center;
+    background-color: rgb(22, 22, 22);
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: #fff;
+}
+body .modal-voice-container .modal .icon, body .modal-voice-container .modal .icon2,body .modal-voice-container .modal .icon3{
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 170, 255, 0.135);
+    background-color: rgba(0, 170, 255, 0.278);
+    border-radius: 34% 66% 49% 51% / 69% 45% 55% 31%;
+    animation: microphone_wave infinite 1s alternate-reverse ease-in;
+}
+body .modal-voice-container .modal .icon2{
+    border-radius:55% 45% 49% 51% / 61% 54% 46% 39%;
+    animation: microphone_wave infinite 3s alternate-reverse ease-in;
+    animation: rotate infinite 1s ease-in;
+}
+body .modal-voice-container .modal .icon2 {
+    border-radius: 55% 45% 39% 61% / 54% 52% 48% 46%;
+    animation: microphone_wave infinite 5s alternate-reverse ease-in;
+}
+body .modal-voice-container .modal i{
+    padding: 1rem;
+}
+body .modal-voice-container .modal .entered-text{
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    padding: 1rem;
+    overflow: auto;
+}
+body .modal-voice-container .modal #recognition-button{
+    width: 50%;
+    border: none;
+    background-color: rgb(23, 51, 64);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+body .modal-voice-container .modal #recognition-button:hover{
+    background-color: rgba(0, 170, 255, 0.728);
+}
 
-body{
+.container{
     width: 100vw; 
     height: 100vh;
     display: flex;
@@ -31,7 +102,7 @@ body .main-container h1{
 }
 
 body .main-container .container-search{
-    background-color: rgb(255, 255, 255, 50%);
+    background-color: rgb(255, 255, 255);
     color: #000;
     border-radius: 360px;
     width: 170%;
@@ -56,4 +127,96 @@ body .main-container .container-search .search-input{
 
 .search-input{
     background-color: rgb(255, 255, 255, 0%);
+}
+.fa-microphone{
+    cursor: pointer;
+    transition: color 0.5s ease-out;
+}
+.fa-microphone:hover{
+    color: rgb(14, 119, 211);
+}
+.container .images-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(246, 244, 244, 0.603);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.container .images-container p{
+    color: white;
+    padding-bottom: 1rem;
+}
+.container .images-container img{
+    width: 8rem;
+    height: 6rem;
+    border: #f9f9f9 5px solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(127, 125, 125, 0.065);
+    cursor: pointer;
+    transition: color 0.5s ease-out;
+
+}
+.image_photo{
+    transition: opacity 0.5s ease-out;
+}
+.image_photo:hover{
+    opacity: 0.5;
+}
+
+/*MEDIA QUERIES*/
+@media(max-width:700px) {
+    body .main-container .container-search {
+        width: 150%;
+    }
+}
+
+@media(max-width:600px) {
+    body .main-container h1 {
+        font-size: 5rem;
+    }
+    .container .images-container img{
+        width: 7rem;
+        height: 5rem;
+    }
+}
+
+@media(max-width:500px) {
+    body .main-container h1 {
+        font-size: 4.8rem;
+    }
+    body .main-container .container-search {
+        width: 120%;
+        padding: 0.5rem 2rem;
+    }
+    .container .images-container img{
+        width: 5rem;
+        height: 4rem;
+    }
+}
+
+/* Keyframes */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes microphone_wave {
+    to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
 }
